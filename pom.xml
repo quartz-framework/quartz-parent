@@ -5,14 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>xyz.quartzframework</groupId>
     <artifactId>quartz-parent</artifactId>
-    <version>${quartz.version}</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <quartz.version>1.0.0</quartz.version>
     </properties>
 
     <pluginRepositories>
@@ -38,7 +37,7 @@
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-core</artifactId>
-                <version>${quartz.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
