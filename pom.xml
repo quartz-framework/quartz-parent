@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>xyz.quartzframework</groupId>
     <artifactId>quartz-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -31,6 +31,10 @@
             <id>spigot</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>bungeecord-repo</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
     </repositories>
 
     <dependencyManagement>
@@ -38,6 +42,16 @@
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-core</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.quartzframework.starter</groupId>
+                <artifactId>quartz-spigot-plugin-starter</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.quartzframework.starter</groupId>
+                <artifactId>quartz-bungee-plugin-starter</artifactId>
                 <version>${quartz.version}</version>
             </dependency>
             <dependency>
