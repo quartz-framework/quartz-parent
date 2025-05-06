@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>xyz.quartzframework</groupId>
     <artifactId>quartz-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${quartz.version}</version>
     <packaging>pom</packaging>
 
     <properties>
