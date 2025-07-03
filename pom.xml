@@ -15,6 +15,11 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <quartz.version>0.0.1-SNAPSHOT</quartz.version>
+        <sql-server.version>12.10.1.jre11</sql-server.version>
+        <oracle-db.version>23.8.0.25.04</oracle-db.version>
+        <mysql.version>9.3.0</mysql.version>
+        <postgresql.version>42.7.7</postgresql.version>
+        <h2-db.version>2.3.232</h2-db.version>
     </properties>
 
     <developers>
@@ -90,6 +95,31 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2-db.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc11</artifactId>
+                <version>${oracle-db.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>mssql-jdbc</artifactId>
+                <version>${sql-server.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
