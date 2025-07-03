@@ -68,12 +68,22 @@
             </dependency>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
+                <artifactId>quartz-data</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-spigot-plugin-starter</artifactId>
                 <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-bungee-plugin-starter</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.quartzframework</groupId>
+                <artifactId>quartz-data-starter-jpa</artifactId>
                 <version>${quartz.version}</version>
             </dependency>
             <dependency>
