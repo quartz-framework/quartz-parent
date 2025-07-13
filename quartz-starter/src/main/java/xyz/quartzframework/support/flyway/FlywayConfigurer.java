@@ -19,7 +19,7 @@ class FlywayConfigurer {
     @Preferred
     @ActivateWhenBeanPresent(DataSource.class)
     @ActivateWhenPropertyEquals(expression = "${quartz.flyway.enabled:false}", expected = "true")
-    Flyway flyway(ResourceLoader resourceLoader, DataSource dataSource, FlywayProperties properties) {
+    public Flyway flyway(ResourceLoader resourceLoader, DataSource dataSource, FlywayProperties properties) {
         log.info("Enabling Flyway support...");
         Flyway flyway = Flyway.configure(resourceLoader.getClassLoader())
                 .dataSource(dataSource)
