@@ -1,4 +1,4 @@
-package xyz.quartzframework;
+package xyz.quartzframework.support.beans;
 
 import xyz.quartzframework.aop.NoProxy;
 import xyz.quartzframework.beans.definition.QuartzBeanDefinitionBuilder;

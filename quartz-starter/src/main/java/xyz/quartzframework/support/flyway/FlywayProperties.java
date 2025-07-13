@@ -1,4 +1,4 @@
-package xyz.quartzframework.data.properties;
+package xyz.quartzframework.support.flyway;
 
 import lombok.Getter;
 import xyz.quartzframework.Injectable;

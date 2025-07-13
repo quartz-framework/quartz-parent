@@ -1,6 +1,7 @@
-package xyz.quartzframework;
+package xyz.quartzframework.support.config;
 
 import org.springframework.core.convert.ConversionService;
+import xyz.quartzframework.Quartz;
 import xyz.quartzframework.aop.NoProxy;
 import xyz.quartzframework.beans.support.annotation.Provide;
 import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenBeanMissing;
