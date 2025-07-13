@@ -7,6 +7,8 @@ import xyz.quartzframework.beans.support.annotation.Preferred;
 import xyz.quartzframework.beans.support.annotation.Provide;
 import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenBeanPresent;
 import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenClassPresent;
+import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenPropertyEquals;
+import xyz.quartzframework.config.Property;
 import xyz.quartzframework.stereotype.Configurer;
 
 import javax.sql.DataSource;
@@ -19,6 +21,7 @@ public class FlywayConfigurer {
     @Provide
     @Preferred
     @ActivateWhenBeanPresent(DataSource.class)
+    @ActivateWhenPropertyEquals(value = @Property("${quartz.flyway.enabled:false}"), expected = "true")
     public Flyway flyway(ResourceLoader resourceLoader, DataSource dataSource, FlywayProperties properties) {
         log.info("Enabling Flyway support...");
         Flyway flyway = Flyway.configure(resourceLoader.getClassLoader())
@@ -33,9 +36,7 @@ public class FlywayConfigurer {
                 .validateOnMigrate(properties.isValidateOnMigrate())
                 .outOfOrder(properties.isOutOfOrder())
                 .load();
-        if (properties.isEnabled()) {
-            flyway.migrate();
-        }
+        flyway.migrate();
         return flyway;
     }
 }
