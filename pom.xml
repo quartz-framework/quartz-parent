@@ -48,7 +48,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-
+        
         <postgresql.version>42.7.3</postgresql.version>
         <mysql.version>8.3.0</mysql.version>
         <mariadb.version>3.3.2</mariadb.version>
@@ -88,32 +88,32 @@
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-starter-data-jpa</artifactId>
-                <version>${project.version}</version>
+                <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-starter-spigot-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-starter-bungee-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-starter-async</artifactId>
-                <version>${project.version}</version>
+                <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-starter-tasks</artifactId>
-                <version>${project.version}</version>
+                <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-starter</artifactId>
-                <version>${project.version}</version>
+                <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
