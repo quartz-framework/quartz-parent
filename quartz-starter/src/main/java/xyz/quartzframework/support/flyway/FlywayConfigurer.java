@@ -5,10 +5,7 @@ import org.flywaydb.core.Flyway;
 import org.springframework.core.io.ResourceLoader;
 import xyz.quartzframework.beans.support.annotation.Preferred;
 import xyz.quartzframework.beans.support.annotation.Provide;
-import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenBeanPresent;
-import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenClassPresent;
-import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenPropertyEquals;
-import xyz.quartzframework.config.Property;
+import xyz.quartzframework.beans.support.annotation.condition.*;
 import xyz.quartzframework.stereotype.Configurer;
 
 import javax.sql.DataSource;
@@ -16,13 +13,13 @@ import javax.sql.DataSource;
 @Slf4j
 @ActivateWhenClassPresent(classNames = "org.flywaydb.core.Flyway")
 @Configurer(force = true)
-public class FlywayConfigurer {
+class FlywayConfigurer {
 
     @Provide
     @Preferred
     @ActivateWhenBeanPresent(DataSource.class)
     @ActivateWhenPropertyEquals(expression = "${quartz.flyway.enabled:false}", expected = "true")
-    public Flyway flyway(ResourceLoader resourceLoader, DataSource dataSource, FlywayProperties properties) {
+    Flyway flyway(ResourceLoader resourceLoader, DataSource dataSource, FlywayProperties properties) {
         log.info("Enabling Flyway support...");
         Flyway flyway = Flyway.configure(resourceLoader.getClassLoader())
                 .dataSource(dataSource)

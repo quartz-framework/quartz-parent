@@ -17,7 +17,7 @@ public class FlywayProperties {
     @Property("${quartz.flyway.table:flyway_schema_history}")
     private String table;
 
-    @Property("${quartz.flyway.enabled:true}")
+    @Property("${quartz.flyway.enabled:false}")
     private boolean enabled;
 
     @Property("${quartz.flyway.baseline-on-migrate:true}")
