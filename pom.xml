@@ -87,6 +87,21 @@
         <dependencies>
             <dependency>
                 <groupId>xyz.quartzframework</groupId>
+                <artifactId>quartz-starter-data-jpa</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.quartzframework</groupId>
+                <artifactId>quartz-starter-spigot-plugin</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.quartzframework</groupId>
+                <artifactId>quartz-starter-bungee-plugin</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xyz.quartzframework</groupId>
                 <artifactId>quartz-starter-async</artifactId>
                 <version>${project.version}</version>
             </dependency>

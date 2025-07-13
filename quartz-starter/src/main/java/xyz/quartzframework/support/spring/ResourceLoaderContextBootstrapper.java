@@ -1,4 +1,4 @@
-package xyz.quartzframework;
+package xyz.quartzframework.support.spring;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.DefaultResourceLoader;

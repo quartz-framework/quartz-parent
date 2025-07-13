@@ -1,7 +1,7 @@
-package xyz.quartzframework;
+package xyz.quartzframework.support.beans;
 
 import xyz.quartzframework.aop.NoProxy;
-import xyz.quartzframework.beans.strategy.BeanNameStrategy;
+import xyz.quartzframework.beans.factory.QuartzBeanFactory;
 import xyz.quartzframework.beans.support.annotation.Preferred;
 import xyz.quartzframework.beans.support.annotation.Provide;
 import xyz.quartzframework.context.QuartzContext;
@@ -9,11 +9,11 @@ import xyz.quartzframework.stereotype.ContextBootstrapper;
 
 @NoProxy
 @ContextBootstrapper
-public class BeanNameStrategyContextBootstrapper {
+public class BeanFactoryContextBootstrapper {
 
     @Provide
     @Preferred
-    BeanNameStrategy beanDefinitionRegistry(QuartzContext<?> context) {
-        return context.getBeanNameStrategy();
+    QuartzBeanFactory beanFactory(QuartzContext<?> context) {
+        return context.getBeanFactory();
     }
 }

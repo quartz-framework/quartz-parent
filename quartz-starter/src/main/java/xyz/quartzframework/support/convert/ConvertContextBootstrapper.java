@@ -1,4 +1,4 @@
-package xyz.quartzframework;
+package xyz.quartzframework.support.convert;
 
 import lombok.val;
 import org.bspfsystems.yamlconfiguration.configuration.ConfigurationSection;

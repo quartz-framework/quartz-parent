@@ -30,5 +30,11 @@
             <groupId>xyz.quartzframework</groupId>
             <artifactId>quartz-starter-async</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>

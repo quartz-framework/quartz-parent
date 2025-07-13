@@ -1,12 +1,12 @@
-package xyz.quartzframework.data.configurer;
+package xyz.quartzframework.support.flyway;
 
 import lombok.extern.slf4j.Slf4j;
 import org.flywaydb.core.Flyway;
 import org.springframework.core.io.ResourceLoader;
 import xyz.quartzframework.beans.support.annotation.Preferred;
 import xyz.quartzframework.beans.support.annotation.Provide;
+import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenBeanPresent;
 import xyz.quartzframework.beans.support.annotation.condition.ActivateWhenClassPresent;
-import xyz.quartzframework.data.properties.FlywayProperties;
 import xyz.quartzframework.stereotype.Configurer;
 
 import javax.sql.DataSource;
@@ -18,6 +18,7 @@ public class FlywayConfigurer {
 
     @Provide
     @Preferred
+    @ActivateWhenBeanPresent(DataSource.class)
     public Flyway flyway(ResourceLoader resourceLoader, DataSource dataSource, FlywayProperties properties) {
         log.info("Enabling Flyway support...");
         Flyway flyway = Flyway.configure(resourceLoader.getClassLoader())
